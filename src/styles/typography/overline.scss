@@ -1,0 +1,8 @@
+@mixin overline {
+  font-family: var(--font);
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}

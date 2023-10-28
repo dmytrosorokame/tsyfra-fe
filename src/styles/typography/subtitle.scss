@@ -1,0 +1,16 @@
+
+@mixin subtitle1 {
+  font-family: var(--font);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.15px;
+}
+
+@mixin subtitle2 {
+  font-family: var(--font);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.71;
+  letter-spacing: 0.1px;
+}

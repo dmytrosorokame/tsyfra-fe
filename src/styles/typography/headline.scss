@@ -1,0 +1,41 @@
+@mixin headline1 {
+  font-family: var(--font);
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 42px;
+}
+
+@mixin headline2 {
+  font-family: var(--font);
+  font-size: 31px;
+  font-weight: 400;
+  line-height: 36px;
+}
+
+@mixin headline3 {
+  font-family: var(--font);
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 29px;
+}
+
+@mixin headline4 {
+  font-family: var(--font);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 23px;
+}
+
+@mixin headline5 {
+  font-family: var(--font);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+}
+
+@mixin headline6 {
+  font-family: var(--font);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 15px;
+}
