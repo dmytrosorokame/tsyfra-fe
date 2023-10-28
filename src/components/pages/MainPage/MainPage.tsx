@@ -5,7 +5,7 @@ import Button from "../../atoms/Button";
 const MainPage: React.FC = () => {
   return (
     <div className={classes.main}>
-      <Button />
+      <Button>Click me!</Button>
     </div>
   );
 };

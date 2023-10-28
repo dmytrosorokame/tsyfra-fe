@@ -1,5 +1,8 @@
-function App() {
-  return <></>;
-}
+import AppRouter from "./router/AppRouter";
+import AppWrapper from "./wrappers/AppWrapper/AppWrapper";
 
-export default App;
+export const App = () => (
+  <AppWrapper>
+    <AppRouter />
+  </AppWrapper>
+);
