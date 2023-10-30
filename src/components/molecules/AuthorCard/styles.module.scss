@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 13px 16px;
+  border-radius: 12px;
+  background-color: var(--grayColor);
+  gap: 10px;
+}
+
+.image {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.contentContainer {
+  width: 100%;
+}
