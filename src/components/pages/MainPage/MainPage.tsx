@@ -1,6 +1,8 @@
 import React from 'react';
 import Button from 'src/components/atoms/Button';
-import ArrowIcon from 'src/icons/arrow-icon';
+import IconButton from 'src/components/atoms/IconButton';
+import ArrowIcon from 'src/icons/ArrowIcon';
+import { IconButtonSize } from 'src/types/icon-buttons';
 
 import classes from './styles.module.scss';
 
@@ -10,6 +12,10 @@ const MainPage: React.FC = () => {
       <Button isDisabled isOutlined Icon={<ArrowIcon />}>
         Click me!
       </Button>
+
+      <IconButton size={IconButtonSize.SMALL} isDisabled>
+        <ArrowIcon />
+      </IconButton>
     </div>
   );
 };
