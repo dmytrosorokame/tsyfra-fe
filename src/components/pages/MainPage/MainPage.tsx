@@ -1,7 +1,7 @@
 import React from 'react';
+import ArrowIcon from 'src/assets/icons/ArrowIcon';
 import Button from 'src/components/atoms/Button';
 import IconButton from 'src/components/atoms/IconButton';
-import ArrowIcon from 'src/icons/ArrowIcon';
 import { IconButtonSize } from 'src/types/icon-buttons';
 
 import classes from './styles.module.scss';
