@@ -1,8 +1,9 @@
-import React, { PropsWithChildren } from "react";
-import { useStyles } from "../../hooks/useStyles";
-import classes from "./styles.module.scss";
+import React, { PropsWithChildren } from 'react';
+import { useStyles } from 'src/hooks/useStyles';
 
-import "../../styles/reset/reset.scss";
+import classes from './styles.module.scss';
+
+import 'src/styles/reset/reset.scss';
 
 const StylesWrapper: React.FC<PropsWithChildren> = ({ children }) => {
   const style = useStyles();

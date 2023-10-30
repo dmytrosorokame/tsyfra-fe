@@ -1,14 +1,13 @@
-import React from "react";
-import classes from "./styles.module.scss";
-import Button from "../../atoms/Button";
-import ArrowIcon from "../../../icons/arrow-icon";
+import React from 'react';
+import Button from 'src/components/atoms/Button';
+import ArrowIcon from 'src/icons/arrow-icon';
+
+import classes from './styles.module.scss';
 
 const MainPage: React.FC = () => {
   return (
     <div className={classes.main}>
-      <Button Icon={<ArrowIcon />} onClick={console.log}>
-        Click me!
-      </Button>
+      <Button Icon={<ArrowIcon />}>Click me!</Button>
     </div>
   );
 };

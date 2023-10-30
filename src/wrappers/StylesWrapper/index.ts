@@ -1,1 +1,1 @@
-export { default } from "./StylesWrapper";
+export { default } from './StylesWrapper';

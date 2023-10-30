@@ -1,22 +1,16 @@
-import React from "react";
+import cn from 'classnames';
+import React from 'react';
 
-import classes from "./styles.module.scss";
-import cn from "classnames";
+import classes from './styles.module.scss';
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface IButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   Icon?: React.ReactNode;
   isPrimary?: boolean;
   isOutlined?: boolean;
   isDisabled?: boolean;
 }
 
-const Button: React.FC<ButtonProps> = ({
-  children,
-  Icon,
-  isOutlined,
-  isDisabled,
-  ...rest
-}) => (
+const Button: React.FC<IButtonProps> = ({ children, Icon, isOutlined, isDisabled, ...rest }) => (
   <button
     className={cn(classes.container, {
       [classes.outlined]: isOutlined,
