@@ -8,9 +8,10 @@ interface IButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   isPrimary?: boolean;
   isOutlined?: boolean;
   isDisabled?: boolean;
+  isIconRight?: boolean;
 }
 
-const Button: React.FC<IButtonProps> = ({ children, Icon, isOutlined, isDisabled, ...rest }) => (
+const Button: React.FC<IButtonProps> = ({ children, Icon, isOutlined, isDisabled, isIconRight, ...rest }) => (
   <button
     className={cn(classes.container, {
       [classes.outlined]: isOutlined,
@@ -19,9 +20,11 @@ const Button: React.FC<IButtonProps> = ({ children, Icon, isOutlined, isDisabled
     {...rest}
     disabled={isDisabled}
   >
-    {Icon && <div className={classes.icon}>{Icon}</div>}
+    {Icon && !isIconRight && <div className={classes.icon}>{Icon}</div>}
 
     <span className={classes.label}>{children}</span>
+
+    {Icon && isIconRight && <div className={classes.icon}>{Icon}</div>}
   </button>
 );
 
