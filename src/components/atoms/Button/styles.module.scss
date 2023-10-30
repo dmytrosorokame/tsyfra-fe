@@ -1,66 +1,43 @@
 @use '../../../styles/typography/buttonLabel.scss' as buttonLabel;
 
+// Base styles for the container
 .container {
-  background-color: var(--primary75Color);
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
+  display: flex;
   width: 100%;
+  align-items: center;
+  justify-content: center;
   padding: 16px;
   border-radius: 12px;
-  border: 1px solid var(--primary75Color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: var(--primary75Color);
+  cursor: pointer;
   gap: 12px;
+  transition: all 0.3s ease-in-out;
 
   &:hover {
     background-color: var(--primary100Color);
-    border-color: var(--primary100Color)
   }
 
   &.outlined {
+    border: 1px solid var(--strokeColor);
     background-color: var(--whiteColor);
-    border-color: var(--strokeColor);
-    
-    .label {
-      color: var(--primary75Color);
-    }
 
     &:hover {
-      background-color: var(--primary10Color);
       border-color: var(--primary25Color);
-
-      .label {
-        color: var(--primary100Color);
-      }
-
-      .icon svg path {
-        fill: var(--primary100Color);
-      }
+      background-color: var(--primary10Color);
     }
   }
 
   &.disabled {
+    border: 1px solid var(--grayColor);
     background-color: var(--grayColor);
-    border-color: var(--grayColor);
+  }
 
-    .label {
-      color: var(--black75Color);
-    }
+  &.disabled.outlined {
+    background-color: var(--whiteColor);
 
     &:hover {
-      .icon svg path {
-        fill: var(--black50Color);
-      }
-    }
-
-    &.outlined {
+      border-color: var(--grayColor);
       background-color: var(--whiteColor);
-      border-color: var(--strokeColor);
-
-      .label {
-        color: var(--black75Color);
-      }
     }
   }
 }
@@ -69,6 +46,27 @@
   @include buttonLabel.buttonLabel;
 
   color: var(--whiteColor);
+  transition: color 0.3s ease-in-out;
+
+  .container.disabled & {
+    color: var(--black75Color);
+  }
+
+  .container.outlined & {
+    color: var(--primary75Color);
+  }
+
+  .container.disabled.outlined & {
+    color: var(--black75Color);
+  }
+
+  .container.outlined:hover & {
+    color: var(--primary100Color);
+  }
+
+  .container.disabled.outlined:hover & {
+    color: var(--black75Color);
+  }
 }
 
 .icon svg {
@@ -77,13 +75,26 @@
 
   path {
     fill: var(--whiteColor);
+    transition: fill 0.3s ease-in-out;
 
-    .outlined & {
+    .container.outlined & {
       fill: var(--primary75Color);
     }
 
-    .disabled & {
+    .container.disabled & {
       fill: var(--black50Color);
     }
-  } 
+
+    .container.outlined:hover & {
+      fill: var(--primary100Color);
+    }
+
+    .container.disabled.outlined & {
+      fill: var(--black50Color);
+    }
+
+    .container.disabled.outlined:hover & {
+      fill: var(--black50Color);
+    }
+  }
 }

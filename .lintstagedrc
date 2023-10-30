@@ -1,0 +1,9 @@
+{
+  "*.(ts|tsx|js|jsx)": [
+    "prettier --write",
+    "npm run lint:fix -- --quiet"
+  ],
+  "*.(scss)": [
+    "npm run stylelint:fix"
+  ]
+}

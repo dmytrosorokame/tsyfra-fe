@@ -7,7 +7,9 @@ import classes from './styles.module.scss';
 const MainPage: React.FC = () => {
   return (
     <div className={classes.main}>
-      <Button Icon={<ArrowIcon />}>Click me!</Button>
+      <Button isDisabled isOutlined Icon={<ArrowIcon />}>
+        Click me!
+      </Button>
     </div>
   );
 };
