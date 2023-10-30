@@ -2,12 +2,12 @@ import { CSSProperties } from "react";
 
 export const DEFAULT_COLORS = {
   // Primary
-  "--primary100Color": "rgba(248, 21, 57, 0.05)",
-  "--primary200Color": "rgba(248, 21, 57, 0.10)",
-  "--primary300Color": "rgba(248, 21, 57, 0.25)",
-  "--primary400Color": "rgba(248, 21, 57, 0.50)",
-  "--primary500Color": "rgba(248, 21, 57, 0.75)",
-  "--primary600Color": "#F81539",
+  "--primary5Color": "rgba(248, 21, 57, 0.05)",
+  "--primary10Color": "rgba(248, 21, 57, 0.10)",
+  "--primary25Color": "rgba(248, 21, 57, 0.25)",
+  "--primary50Color": "rgba(248, 21, 57, 0.50)",
+  "--primary75Color": "rgba(248, 21, 57, 0.75)",
+  "--primary100Color": "#F81539",
 
   // Secondary
   "--secondary100Color": "rgba(252, 67, 8, 0.05)",
@@ -28,6 +28,17 @@ export const DEFAULT_COLORS = {
   // White
   "--whiteColor": "#FFFFFF",
 
+  // Gray
+  "--grayColor": "#F5F5F5",
+
   // Black
-  "--blackColor": "#000000",
+  "--black50Color": "rgba(0, 0, 0, 0.50)",
+  "--black75Color": "rgba(0, 0, 0, 0.75)",
+  "--black100Color": "#000000",
+
+  // Stroke
+  "--strokeColor": "#E6E6E6",
+
+  // Gradient
+  "--gradientColor": "linear-gradient(270deg, #F81539 0%, #FC4308 94%)",
 } as CSSProperties;

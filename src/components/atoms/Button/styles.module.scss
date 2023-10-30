@@ -1,4 +1,89 @@
+@use '../../../styles/typography/buttonLabel.scss' as buttonLabel;
+
 .container {
-  background-color: var(--primary600Color);
+  background-color: var(--primary75Color);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid var(--primary75Color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+
+  &:hover {
+    background-color: var(--primary100Color);
+    border-color: var(--primary100Color)
+  }
+
+  &.outlined {
+    background-color: var(--whiteColor);
+    border-color: var(--strokeColor);
+    
+    .label {
+      color: var(--primary75Color);
+    }
+
+    &:hover {
+      background-color: var(--primary10Color);
+      border-color: var(--primary25Color);
+
+      .label {
+        color: var(--primary100Color);
+      }
+
+      .icon svg path {
+        fill: var(--primary100Color);
+      }
+    }
+  }
+
+  &.disabled {
+    background-color: var(--grayColor);
+    border-color: var(--grayColor);
+
+    .label {
+      color: var(--black75Color);
+    }
+
+    &:hover {
+      .icon svg path {
+        fill: var(--black50Color);
+      }
+    }
+
+    &.outlined {
+      background-color: var(--whiteColor);
+      border-color: var(--strokeColor);
+
+      .label {
+        color: var(--black75Color);
+      }
+    }
+  }
+}
+
+.label {
+  @include buttonLabel.buttonLabel;
+
   color: var(--whiteColor);
+}
+
+.icon svg {
+  width: 16px;
+  height: 16px;
+
+  path {
+    fill: var(--whiteColor);
+
+    .outlined & {
+      fill: var(--primary75Color);
+    }
+
+    .disabled & {
+      fill: var(--black50Color);
+    }
+  } 
 }
