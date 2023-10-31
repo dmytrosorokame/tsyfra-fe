@@ -6,23 +6,23 @@ import IconButton from 'src/components/atoms/IconButton';
 
 import classes from './styles.module.scss';
 
-interface IAuthorCardProps {
-  title: string;
-  subtitle: string;
+interface IProps {
+  name: string;
+  date: Date;
   image: string;
   isSaved?: boolean;
   onSaveClick: () => void;
 }
 
-const AuthorCard: React.FC<IAuthorCardProps> = ({ title, subtitle, image, isSaved, onSaveClick }) => (
+const AuthorCard: React.FC<IProps> = ({ name, date, image, isSaved, onSaveClick }) => (
   <div className={classes.container}>
     <div className={classes.contentContainer}>
-      <img className={classes.image} src={image} alt={title} />
+      <img className={classes.image} src={image} alt={name} />
 
       <div className={classes.texts}>
-        <h6 className={classes.title}>{title}</h6>
+        <h6 className={classes.title}>{name}</h6>
 
-        <p className={classes.subtitle}>{subtitle}</p>
+        <p className={classes.subtitle}>{date.toISOString()}</p>
       </div>
     </div>
 
