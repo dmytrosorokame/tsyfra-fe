@@ -16,12 +16,14 @@ interface IAuthorCardProps {
 
 const AuthorCard: React.FC<IAuthorCardProps> = ({ title, subtitle, image, isSaved, onSaveClick }) => (
   <div className={classes.container}>
-    <img className={classes.image} src={image} alt={title} />
-
     <div className={classes.contentContainer}>
-      <h6 className={classes.title}>{title}</h6>
+      <img className={classes.image} src={image} alt={title} />
 
-      <p className={classes.subtitle}>{subtitle}</p>
+      <div className={classes.texts}>
+        <h6 className={classes.title}>{title}</h6>
+
+        <p className={classes.subtitle}>{subtitle}</p>
+      </div>
     </div>
 
     <IconButton onClick={onSaveClick}>

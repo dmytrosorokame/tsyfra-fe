@@ -1,7 +1,11 @@
+@use '../../../styles/typography/subtitle.scss' as subtitle;
+@use '../../../styles/typography/body.scss' as body;
+
 .container {
   display: flex;
   width: 100%;
   align-items: center;
+  justify-content: space-between;
   padding: 13px 16px;
   border-radius: 12px;
   background-color: var(--grayColor);
@@ -16,5 +20,24 @@
 }
 
 .contentContainer {
-  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+
+.texts {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.title {
+  @include subtitle.subtitle2;
+
+  color: var(--blackColor);
+}
+
+.subtitle {
+  @include body.body3;
+
+  color: var(--black75Color);
 }

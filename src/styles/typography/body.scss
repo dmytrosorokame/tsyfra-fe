@@ -13,3 +13,11 @@
   letter-spacing: 0.25px;
   line-height: 1.42;
 }
+
+@mixin body3 {
+  font-family: var(--font);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.25px;
+  line-height: 1.5;
+}
