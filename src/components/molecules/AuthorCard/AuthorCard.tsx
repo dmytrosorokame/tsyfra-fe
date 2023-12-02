@@ -22,7 +22,7 @@ const AuthorCard: React.FC<IProps> = ({ name, date, image, isSaved, onSaveClick 
       <div className={classes.texts}>
         <h6 className={classes.title}>{name}</h6>
 
-        <p className={classes.subtitle}>{date.toISOString()}</p>
+        <p className={classes.subtitle}>{date?.toISOString()}</p>
       </div>
     </div>
 
