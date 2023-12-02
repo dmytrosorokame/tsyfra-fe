@@ -28,6 +28,7 @@ const PostsSlider: React.FC<IProps> = ({ title, posts }) => (
         </IconButton>
       </div>
     </div>
+
     <div>
       <PostCard
         title="Title"

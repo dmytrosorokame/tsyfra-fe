@@ -10,12 +10,12 @@ export const DEFAULT_COLORS = {
   '--primary100Color': '#F81539',
 
   // Secondary
-  '--secondary100Color': 'rgba(252, 67, 8, 0.05)',
-  '--secondary200Color': 'rgba(252, 67, 8, 0.10)',
-  '--secondary300Color': 'rgba(252, 67, 8, 0.25)',
-  '--secondary400Color': 'rgba(252, 67, 8, 0.50)',
-  '--secondary500Color': 'rgba(252, 67, 8, 0.75)',
-  '--secondary600Color': '#FC4308',
+  '--secondary5Color': 'rgba(252, 67, 8, 0.05)',
+  '--secondary10Color': 'rgba(252, 67, 8, 0.10)',
+  '--secondary25Color': 'rgba(252, 67, 8, 0.25)',
+  '--secondary50Color': 'rgba(252, 67, 8, 0.50)',
+  '--secondary75Color': 'rgba(252, 67, 8, 0.75)',
+  '--secondary100Color': '#FC4308',
 
   // Neutral
   '--neutral100Color': 'rgba(62, 50, 50, 0.05)',

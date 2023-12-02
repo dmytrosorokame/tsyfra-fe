@@ -7,4 +7,12 @@ export const APP_ROUTES = createBrowserRouter([
     path: '/',
     element: <MainPage />,
   },
+  {
+    path: '/contact',
+    element: <div>Contact</div>,
+  },
+  {
+    path: '/about',
+    element: <div>About</div>,
+  },
 ]);
