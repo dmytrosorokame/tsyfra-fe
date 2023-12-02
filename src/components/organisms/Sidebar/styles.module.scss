@@ -27,6 +27,7 @@
   font-size: 22px;
   font-weight: 700;
   color: var(--secondary100Color);
+  background: none;
 }
 
 
@@ -42,4 +43,17 @@
 
 .categoriesTitle {
   @include headline.headline5;
+}
+
+.pages {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.pageLink {
+  @include headline.headline5;
+
+  color: var(--black100Color);
 }

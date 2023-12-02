@@ -1,5 +1,4 @@
 import React from 'react';
-import Navigation from 'src/components/organisms/Navigation/Navigation';
 import PostsSlider from 'src/components/organisms/PostsSlider';
 
 import classes from './styles.module.scss';
@@ -7,18 +6,16 @@ import classes from './styles.module.scss';
 const MainPage: React.FC = () => {
   return (
     <div className={classes.main}>
-      <Navigation />
-
       <div className={classes.section}>
-        <PostsSlider title="Popular Posts" />
+        <PostsSlider title="Популярне" />
       </div>
 
       <div className={classes.section}>
-        <PostsSlider title="Popular Posts" />
+        <PostsSlider title="Останні новини" />
       </div>
 
       <div className={classes.section}>
-        <PostsSlider title="Popular Posts" />
+        <PostsSlider title="Зараз обговорюють" />
       </div>
     </div>
   );

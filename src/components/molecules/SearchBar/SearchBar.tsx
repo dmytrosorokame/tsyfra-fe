@@ -9,7 +9,7 @@ const SearchBar: React.FC = () => (
   <div className={classes.container}>
     <FontAwesomeIcon className={classes.icon} icon={faEllipsisVertical} />
 
-    <input className={classes.input} placeholder="Search anything" type="text" />
+    <input className={classes.input} placeholder="Пошук" type="text" />
 
     <FontAwesomeIcon className={classNames(classes.icon, classes.searchIcon)} icon={faMagnifyingGlass} />
   </div>
