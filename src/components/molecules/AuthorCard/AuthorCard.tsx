@@ -1,6 +1,7 @@
 import { faBookmark } from '@fortawesome/free-regular-svg-icons';
 import { faBookmark as faSolidBookmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import moment from 'moment';
 import React from 'react';
 import IconButton from 'src/components/atoms/IconButton';
 
@@ -11,25 +12,32 @@ interface IProps {
   date: Date;
   image: string;
   isSaved?: boolean;
-  onSaveClick: () => void;
+  onSaveClick?: () => void;
 }
 
-const AuthorCard: React.FC<IProps> = ({ name, date, image, isSaved, onSaveClick }) => (
-  <div className={classes.container}>
-    <div className={classes.contentContainer}>
-      <img className={classes.image} src={image} alt={name} />
+const AuthorCard: React.FC<IProps> = ({ name, date, image, isSaved, onSaveClick }) => {
+  const isShowSaveButton = !!onSaveClick;
 
-      <div className={classes.texts}>
-        <h6 className={classes.title}>{name}</h6>
+  const formattedDate = moment(date).format('MMMM D, YYYY'); // July 14, 2022
 
-        <p className={classes.subtitle}>{date?.toISOString()}</p>
+  return (
+    <div className={classes.container}>
+      <div className={classes.contentContainer}>
+        <img className={classes.image} src={image} alt={name} />
+
+        <div className={classes.texts}>
+          <h6 className={classes.title}>{name}</h6>
+
+          <p className={classes.subtitle}>{formattedDate}</p>
+        </div>
       </div>
+      {isShowSaveButton && (
+        <IconButton onClick={onSaveClick}>
+          {isSaved ? <FontAwesomeIcon icon={faSolidBookmark} /> : <FontAwesomeIcon icon={faBookmark} />}
+        </IconButton>
+      )}
     </div>
-
-    <IconButton onClick={onSaveClick}>
-      {isSaved ? <FontAwesomeIcon icon={faSolidBookmark} /> : <FontAwesomeIcon icon={faBookmark} />}
-    </IconButton>
-  </div>
-);
+  );
+};
 
 export default AuthorCard;

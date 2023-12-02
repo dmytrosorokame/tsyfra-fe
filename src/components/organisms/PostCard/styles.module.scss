@@ -1,0 +1,33 @@
+@use '../../../styles/typography/headline.scss' as headline;
+@use '../../../styles/typography/body.scss' as body;
+
+.container {
+  padding: 10px;
+  border-radius: 12px;
+  background-color: var(--whiteColor);
+  box-shadow: 0 0 32px 0 rgb(0 0 0 / 7%);
+}
+
+.image {
+  width: 100%;
+  height: 186px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.content {
+  margin: 16px 0;
+}
+
+.title {
+  @include headline.headline5;
+
+  margin-bottom: 16px;
+  color: var(--black100Color);
+}
+
+.subtitle {
+  @include body.body2;
+
+  color: var(--black75Color);
+}
