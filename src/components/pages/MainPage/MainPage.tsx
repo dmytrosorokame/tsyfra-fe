@@ -9,7 +9,15 @@ const MainPage: React.FC = () => {
     <div className={classes.main}>
       <Navigation />
 
-      <div>
+      <div className={classes.section}>
+        <PostsSlider title="Popular Posts" />
+      </div>
+
+      <div className={classes.section}>
+        <PostsSlider title="Popular Posts" />
+      </div>
+
+      <div className={classes.section}>
         <PostsSlider title="Popular Posts" />
       </div>
     </div>

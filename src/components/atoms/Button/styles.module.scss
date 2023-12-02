@@ -13,6 +13,10 @@
   gap: 12px;
   transition: all 0.3s ease-in-out;
 
+  &.small {
+    padding: 10px;
+  }
+
   &:hover {
     background-color: var(--primary100Color);
   }

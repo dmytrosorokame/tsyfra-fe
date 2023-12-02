@@ -1,21 +1,32 @@
 import cn from 'classnames';
 import React from 'react';
+import { ButtonSize } from 'src/types/buttons';
 
 import classes from './styles.module.scss';
 
 interface IButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   Icon?: React.ReactNode;
+  size?: ButtonSize;
   isPrimary?: boolean;
   isOutlined?: boolean;
   isDisabled?: boolean;
   isIconRight?: boolean;
 }
 
-const Button: React.FC<IButtonProps> = ({ children, Icon, isOutlined, isDisabled, isIconRight, ...rest }) => (
+const Button: React.FC<IButtonProps> = ({
+  children,
+  Icon,
+  size = ButtonSize.LARGE,
+  isOutlined,
+  isDisabled,
+  isIconRight,
+  ...rest
+}) => (
   <button
     className={cn(classes.container, {
       [classes.outlined]: isOutlined,
       [classes.disabled]: isDisabled,
+      [classes.small]: size === ButtonSize.SMALL,
     })}
     {...rest}
     disabled={isDisabled}

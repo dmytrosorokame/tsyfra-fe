@@ -4,7 +4,7 @@ import React from 'react';
 import HighlightedText from 'src/components/atoms/HighlightedText';
 import IconButton from 'src/components/atoms/IconButton';
 import PostCard from 'src/components/organisms/PostCard/PostCard';
-import { IconButtonSize } from 'src/types/icon-buttons';
+import { ButtonSize } from 'src/types/buttons';
 
 import classes from './styles.module.scss';
 
@@ -19,11 +19,11 @@ const PostsSlider: React.FC<IProps> = ({ title, posts }) => (
       <HighlightedText>{title}</HighlightedText>
 
       <div className={classes.buttonsContainer}>
-        <IconButton size={IconButtonSize.SMALL}>
+        <IconButton size={ButtonSize.SMALL}>
           <FontAwesomeIcon icon={faChevronLeft} />
         </IconButton>
 
-        <IconButton size={IconButtonSize.SMALL}>
+        <IconButton size={ButtonSize.SMALL}>
           <FontAwesomeIcon icon={faChevronRight} />
         </IconButton>
       </div>
