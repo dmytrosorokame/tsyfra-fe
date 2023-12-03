@@ -1,8 +1,9 @@
-import { faAnglesUp, faBookmark, faHouse, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faAnglesUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import Button from 'src/components/atoms/Button';
+import { FOOTER_BUTTONS } from 'src/constants/footer-navigation.constants';
 import { ButtonSize } from 'src/types/buttons';
 
 import classes from './styles.module.scss';
@@ -10,9 +11,7 @@ import classes from './styles.module.scss';
 const FooterNavigation: React.FC = () => {
   const navigate = useNavigate();
 
-  const handleNavigateToHome = (): void => {
-    navigate('/');
-  };
+  const location = useLocation();
 
   const handleScrollToTop = (): void => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -20,19 +19,31 @@ const FooterNavigation: React.FC = () => {
 
   return (
     <div className={classes.container}>
-      <div>
-        <Button onClick={handleNavigateToHome} Icon={<FontAwesomeIcon icon={faHouse} />} size={ButtonSize.SMALL}>
-          Головна
-        </Button>
-      </div>
+      {FOOTER_BUTTONS.map(({ icon, path, label, id }) => {
+        const isActive = location.pathname === path;
+        const isNoOneActive = !FOOTER_BUTTONS.some(({ path }) => location.pathname === path);
 
-      <button className={classes.button}>
-        <FontAwesomeIcon icon={faBookmark} />
-      </button>
+        if (isActive || (isNoOneActive && id === 0)) {
+          return (
+            <div key={id}>
+              <Button
+                isShadowed={isNoOneActive && id === 0}
+                onClick={() => navigate(path)}
+                Icon={<FontAwesomeIcon icon={icon} />}
+                size={ButtonSize.SMALL}
+              >
+                {label}
+              </Button>
+            </div>
+          );
+        }
 
-      <button className={classes.button}>
-        <FontAwesomeIcon icon={faUser} />
-      </button>
+        return (
+          <button onClick={() => navigate(path)} key={id} className={classes.button}>
+            <FontAwesomeIcon icon={icon} />
+          </button>
+        );
+      })}
 
       <button onClick={handleScrollToTop} className={classes.button}>
         <FontAwesomeIcon icon={faAnglesUp} />

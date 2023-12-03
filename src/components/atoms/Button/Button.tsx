@@ -9,6 +9,7 @@ interface IButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   size?: ButtonSize;
   isPrimary?: boolean;
   isOutlined?: boolean;
+  isShadowed?: boolean;
   isDisabled?: boolean;
   isIconRight?: boolean;
 }
@@ -18,6 +19,7 @@ const Button: React.FC<IButtonProps> = ({
   Icon,
   size = ButtonSize.LARGE,
   isOutlined,
+  isShadowed,
   isDisabled,
   isIconRight,
   ...rest
@@ -25,7 +27,7 @@ const Button: React.FC<IButtonProps> = ({
   <button
     className={cn(classes.container, {
       [classes.outlined]: isOutlined,
-      [classes.disabled]: isDisabled,
+      [classes.disabled]: isDisabled || isShadowed,
       [classes.small]: size === ButtonSize.SMALL,
     })}
     {...rest}
