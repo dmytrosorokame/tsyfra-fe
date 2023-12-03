@@ -4,6 +4,7 @@ import { useStyles } from 'src/hooks/useStyles';
 import classes from './styles.module.scss';
 
 import 'src/styles/reset/reset.scss';
+import 'swiper/css';
 
 const StylesWrapper: React.FC<PropsWithChildren> = ({ children }) => {
   const style = useStyles();
