@@ -24,18 +24,18 @@
 }
 
 .logo {
+  background: none;
+  color: var(--secondary100Color);
   font-size: 22px;
   font-weight: 700;
-  color: var(--secondary100Color);
-  background: none;
 }
 
 
 .categoriesContainer {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   width: 100%;
+  align-items: center;
+  justify-content: space-between;
   padding: 14px 15px;
   border-radius: 12px;
   background-color: var(--grayColor);
@@ -46,9 +46,9 @@
 }
 
 .pages {
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
+  margin-top: 20px;
   gap: 30px;
 }
 
