@@ -11,10 +11,9 @@ import classes from './styles.module.scss';
 
 interface IProps {
   title: string;
-  posts: any[];
 }
 
-const PostsSlider: React.FC<IProps> = ({ title, posts }) => {
+const PostsSlider: React.FC<IProps> = ({ title }) => {
   const swiperRef = useRef(null);
 
   const handleNextSlide = () => {
