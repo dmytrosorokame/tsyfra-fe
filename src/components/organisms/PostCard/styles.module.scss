@@ -2,13 +2,13 @@
 @use '../../../styles/typography/body.scss' as body;
 
 .container {
+  width: 100%;
   padding: 10px;
+  border: none;
   border-radius: 12px;
   background-color: var(--whiteColor);
-  border: none;
   outline: none;
   text-align: left;
-  width: 100%;
 }
 
 .image {
