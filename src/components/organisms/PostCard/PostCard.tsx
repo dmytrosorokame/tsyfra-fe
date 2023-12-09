@@ -8,6 +8,7 @@ interface IProps {
   subtitle: string;
   image: string;
   date: Date;
+  onClick?: () => void;
   authorName: string;
   authorImage: string;
   isSaved?: boolean;
@@ -19,12 +20,13 @@ const PostCard: React.FC<IProps> = ({
   subtitle,
   image,
   date,
+  onClick,
   authorName,
   authorImage,
   isSaved,
   onSaveClick,
 }) => (
-  <div className={classes.container}>
+  <button onClick={onClick} className={classes.container}>
     <img className={classes.image} src={image} alt={title} />
 
     <div className={classes.content}>
@@ -34,7 +36,7 @@ const PostCard: React.FC<IProps> = ({
     </div>
 
     <AuthorCard name={authorName} image={authorImage} date={date} isSaved={isSaved} onSaveClick={onSaveClick} />
-  </div>
+  </button>
 );
 
 export default PostCard;

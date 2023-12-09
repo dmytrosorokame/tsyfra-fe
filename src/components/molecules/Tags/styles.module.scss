@@ -1,0 +1,20 @@
+@use '../../../styles/typography/headline.scss' as headline;
+
+.container {
+  padding: 20px 15px;
+  background-color: var(--grayColor);
+  border-radius: 12px;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.item {
+  @include headline.headline6; 
+
+  margin-top: 20px;
+  color: var(--black75Color);
+}

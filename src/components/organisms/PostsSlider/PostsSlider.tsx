@@ -1,6 +1,7 @@
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import HighlightedText from 'src/components/atoms/HighlightedText';
 import IconButton from 'src/components/atoms/IconButton';
 import PostCard from 'src/components/organisms/PostCard/PostCard';
@@ -14,6 +15,7 @@ interface IProps {
 }
 
 const PostsSlider: React.FC<IProps> = ({ title }) => {
+  const navigate = useNavigate();
   const swiperRef = useRef(null);
 
   const handleNextSlide = () => {
@@ -22,6 +24,10 @@ const PostsSlider: React.FC<IProps> = ({ title }) => {
 
   const handlePrevSlide = () => {
     swiperRef.current.swiper.slidePrev();
+  };
+
+  const handleNavigateToPostDetail = () => {
+    navigate('/post/1');
   };
 
   return (
@@ -43,6 +49,7 @@ const PostsSlider: React.FC<IProps> = ({ title }) => {
       <Swiper ref={swiperRef} loop>
         <SwiperSlide>
           <PostCard
+            onClick={handleNavigateToPostDetail}
             title="Title"
             image="https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg"
             subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
@@ -53,6 +60,7 @@ const PostsSlider: React.FC<IProps> = ({ title }) => {
         </SwiperSlide>
         <SwiperSlide>
           <PostCard
+            onClick={handleNavigateToPostDetail}
             title="Title"
             image="https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg"
             subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
@@ -63,6 +71,7 @@ const PostsSlider: React.FC<IProps> = ({ title }) => {
         </SwiperSlide>
         <SwiperSlide>
           <PostCard
+            onClick={handleNavigateToPostDetail}
             title="Title"
             image="https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg"
             subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
@@ -73,6 +82,7 @@ const PostsSlider: React.FC<IProps> = ({ title }) => {
         </SwiperSlide>
         <SwiperSlide>
           <PostCard
+            onClick={handleNavigateToPostDetail}
             title="Title"
             image="https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg"
             subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"

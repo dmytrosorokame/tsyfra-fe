@@ -1,9 +1,9 @@
 import { faBookmark } from '@fortawesome/free-regular-svg-icons';
 import { faBookmark as faSolidBookmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import moment from 'moment';
 import React from 'react';
 import IconButton from 'src/components/atoms/IconButton';
+import { formatDate } from 'src/utils/formatDate';
 
 import classes from './styles.module.scss';
 
@@ -18,7 +18,7 @@ interface IProps {
 const AuthorCard: React.FC<IProps> = ({ name, date, image, isSaved, onSaveClick }) => {
   const isShowSaveButton = !!onSaveClick;
 
-  const formattedDate = moment(date).format('MMMM D, YYYY'); // July 14, 2022
+  const formattedDate = formatDate(date);
 
   return (
     <div className={classes.container}>

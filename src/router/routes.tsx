@@ -5,6 +5,7 @@ import CategoriesPage from 'src/components/pages/CategoriesPage';
 import ContactPage from 'src/components/pages/ContactPage';
 import FollowsPage from 'src/components/pages/FollowsPage';
 import MainPage from 'src/components/pages/MainPage';
+import PostDetailPage from 'src/components/pages/PostDetailPage/PostDetailPage';
 import ProfilePage from 'src/components/pages/ProfilePage';
 import AppWrapper from 'src/wrappers/AppWrapper/AppWrapper';
 
@@ -54,6 +55,14 @@ export const APP_ROUTES = createBrowserRouter([
     element: (
       <AppWrapper>
         <FollowsPage />
+      </AppWrapper>
+    ),
+  },
+  {
+    path: '/post/:id',
+    element: (
+      <AppWrapper>
+        <PostDetailPage />
       </AppWrapper>
     ),
   },
