@@ -1,0 +1,16 @@
+.inputList {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  gap: 20px;
+}
+
+.buttonRow {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+
+  button {
+    width: 160px;
+  }
+}

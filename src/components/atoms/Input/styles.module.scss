@@ -1,0 +1,27 @@
+@use '../../../styles/typography/headline.scss' as headline;
+
+.label {
+  @include headline.headline6;
+
+  margin-bottom: 15px;
+  color: var(--black100Color);
+}
+
+.textarea {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  background: var(--grayColor);
+  outline: none;
+}
+
+.input {
+  width: 100%;
+  height: 40px;
+  padding: 0 15px;
+  border: none;
+  border-radius: 12px;
+  background: var(--grayColor);
+  outline: none;
+}

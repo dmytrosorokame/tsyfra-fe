@@ -1,8 +1,10 @@
 import { faCalendar, faComment, faFolder } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
+import AddCommentForm from 'src/components/molecules/AddCommentForm';
 import Tags from 'src/components/molecules/Tags/Tags';
 import CommentList from 'src/components/organisms/CommentList/CommentList';
+import PostsSlider from 'src/components/organisms/PostsSlider';
 import { formatDate } from 'src/utils/formatDate';
 
 import classes from './styles.module.scss';
@@ -49,6 +51,12 @@ const PostDetailPage: React.FC = () => {
       <div className={classes.commentsList}>
         <CommentList title="Коментарі" />
       </div>
+
+      <div className={classes.commentForm}>
+        <AddCommentForm />
+      </div>
+
+      <PostsSlider title="Подібні статті" />
     </div>
   );
 };
