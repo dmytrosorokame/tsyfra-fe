@@ -1,0 +1,82 @@
+@use '../../../styles/typography/headline.scss' as headline;
+@use '../../../styles/typography/buttonLabel.scss' as buttonLabel;
+@use '../../../styles/typography/body.scss' as body;
+
+.container {
+  padding: 15px;
+  border-radius: 12px;
+  background-color: var(--grayColor);
+
+  &.reply {
+    background: transparent;
+  }
+
+  &.withReply {
+    padding-bottom: 140px;
+  }
+}
+
+.topContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  gap: 10px;
+}
+
+.leftTopContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.img {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.name {
+  @include headline.headline6;
+
+  margin-bottom: 10px; 
+  color: var(--black100Color);
+}
+
+.date {
+  display: flex;
+  gap: 8px;
+}
+
+.dateIcon {
+  width: 16px;
+  min-width: 16px;
+  height: 16px;
+  min-height: 16px;
+
+  & > path {
+    fill: var(--black50Color);
+  }
+}
+
+.dateText {
+  @include buttonLabel.buttonLabel;
+
+  color: var(--black75Color);
+}
+
+.text {
+  @include body.body2;
+
+  color: var(--black75Color);
+}
+
+.list {
+  width: calc(100% - 7px);
+  border-radius: 12px;
+  margin-top: -100px;
+  margin-left: 3.5px;
+  background-color: var(--whiteColor);
+  box-shadow: 0 0 32px 0 rgb(0 0 0 / 7%);
+}

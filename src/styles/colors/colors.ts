@@ -32,6 +32,7 @@ export const DEFAULT_COLORS = {
   '--grayColor': '#F5F5F5',
 
   // Black
+  '--black5Color': 'rgba(0, 0, 0, 0.05)',
   '--black10Color': 'rgba(0, 0, 0, 0.10)',
   '--black50Color': 'rgba(0, 0, 0, 0.50)',
   '--black75Color': 'rgba(0, 0, 0, 0.75)',
