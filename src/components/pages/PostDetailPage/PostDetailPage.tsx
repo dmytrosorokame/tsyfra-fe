@@ -1,11 +1,12 @@
+import { faCalendar, faComment, faFolder } from '@fortawesome/free-regular-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
-import { useParams } from 'react-router-dom';
 import Tags from 'src/components/molecules/Tags/Tags';
 import { formatDate } from 'src/utils/formatDate';
 
-const PostDetailPage: React.FC = () => {
-  const { id } = useParams();
+import classes from './styles.module.scss';
 
+const PostDetailPage: React.FC = () => {
   const title = 'How to Spend the Perfect Day on Croatia’s Most Magical Island';
   const text = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl sed sagittis`;
   const img =
@@ -18,17 +19,29 @@ const PostDetailPage: React.FC = () => {
 
   return (
     <div>
-      <h1>{title}</h1>
+      <h1 className={classes.title}>{title}</h1>
 
-      <img src={img} alt={title} />
+      <img className={classes.img} src={img} alt={title} />
 
-      <div>
-        <div>{date}</div>
-        <div>{commentsCount}</div>
-        <div>{category}</div>
+      <div className={classes.info}>
+        <div className={classes.infoItem}>
+          <FontAwesomeIcon icon={faCalendar} className={classes.infoIcon} />
+
+          {date}
+        </div>
+        <div className={classes.infoItem}>
+          <FontAwesomeIcon icon={faComment} className={classes.infoIcon} />
+
+          {commentsCount}
+        </div>
+        <div className={classes.infoItem}>
+          <FontAwesomeIcon icon={faFolder} className={classes.infoIcon} />
+
+          {category}
+        </div>
       </div>
 
-      {text}
+      <p className={classes.text}>{text}</p>
 
       <Tags tags={tags} />
     </div>

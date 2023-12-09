@@ -1,0 +1,45 @@
+@use '../../../styles/typography/headline.scss' as headline;
+@use '../../../styles/typography/buttonLabel.scss' as buttonLabel;
+@use '../../../styles/typography/paragraph.scss' as paragraph;
+
+.title {
+  @include headline.headline4;
+
+  margin-bottom: 20px;
+  color: var(--black100Color);
+}
+
+.img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 40px;
+}
+
+.infoItem {
+  @include buttonLabel.buttonLabel;
+
+  display: flex;
+  color: var(--black75Color);
+  gap: 8px;
+}
+
+.infoIcon {
+  width: 16px;
+  height: 16px;
+
+  & > path {
+      fill: var(--black50Color);
+    }
+}
+
+.text {
+  @include paragraph.paragraph;
+
+  margin: 40px 0;
+}
